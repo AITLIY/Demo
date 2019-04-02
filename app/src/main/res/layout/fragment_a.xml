@@ -1,7 +1,6 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:lee="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.demo.test.Fragment.AFragment">
@@ -31,68 +30,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="get"/>
-
         </LinearLayout>
     </ScrollView>
 
-    <com.demo.test.View.PercentView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-
-        lee:title_text="标题1" />
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        lee:right_button_visible="false"
-        lee:title_background_color="@color/green"
-        lee:title_text="标题2" />
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        lee:left_button_text="左边"
-        lee:right_button_text="右边"
-        lee:title_background_color="@color/red"
-        lee:title_text="标题3" />
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        lee:left_button_text="左边"
-        lee:right_button_drawable="@drawable/titlebar_add_icon"
-        lee:title_background_color="@color/red"
-        lee:title_text="标题4" />
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        lee:left_button_text="左边"
-        lee:left_button_text_color="@color/red"
-        lee:right_button_drawable="@drawable/titlebar_add_icon"
-        lee:title_background_color="@color/blue"
-        lee:title_text="标题5" />
-
-    <com.demo.test.View.CustomTitleBar
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        lee:left_button_text="左边"
-        lee:left_button_text_color="@color/red"
-        lee:right_button_drawable="@drawable/titlebar_add_icon"
-        lee:title_background_color="@color/blue"
-        lee:title_text="标题6"
-        lee:title_text_color="@color/black" />
-
-
-
+    <!--<com.demo.test.View.PercentView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
 </FrameLayout>

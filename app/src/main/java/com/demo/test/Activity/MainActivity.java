@@ -28,15 +28,15 @@ public class MainActivity extends AppCompatActivity {
         tabHost.setup(this, getSupportFragmentManager(), R.id.content2);//设置容器
 
         TabHost.TabSpec one = tabHost.newTabSpec("A");//设置选显卡 标识符
-        one.setIndicator("连接与设置");//设置指示器 显示内容
+        one.setIndicator("A");//设置指示器 显示内容
         tabHost.addTab(one, AFragment.class, null);//添加到tabhost 附带fragment
 
         TabHost.TabSpec two = tabHost.newTabSpec("B");
-        two.setIndicator("查询OBD");
+        two.setIndicator("B");
         tabHost.addTab(two, BFragment.class, null);
 
         TabHost.TabSpec three = tabHost.newTabSpec("C");
-        three.setIndicator("发送数据");
+        three.setIndicator("C");
         tabHost.addTab(three, CFragment.class, null);
 
         //设置监听

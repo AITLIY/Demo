@@ -1,15 +1,74 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lee="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.demo.test.Fragment.AFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="C"
-        android:gravity="center"
-        android:textSize="50sp"/>
+        android:orientation="vertical">
 
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_drawable="@drawable/titlebar_add_icon"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:title_text="标题1"/>
+
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_drawable="@drawable/titlebar_add_icon"
+            lee:left_button_text="左边"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:right_button_visible="false"
+            lee:title_background_color="@color/green"
+            lee:title_text="标题2"/>
+
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_text="左边"
+            lee:right_button_text="右边"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:title_background_color="@color/red"
+            lee:title_text="标题3"/>
+
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_text="左边"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:title_background_color="@color/red"
+            lee:title_text="标题4"/>
+
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_text="左边"
+            lee:left_button_text_color="@color/red"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:title_background_color="@color/blue"
+            lee:title_text="标题5"/>
+
+        <com.demo.test.View.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            lee:left_button_text="左边"
+            lee:left_button_text_color="@color/red"
+            lee:right_button_drawable="@drawable/titlebar_add_icon"
+            lee:title_background_color="@color/blue"
+            lee:title_text_color="@color/black"
+            lee:title_text="标题6"/>
+
+    </LinearLayout>
 </FrameLayout>

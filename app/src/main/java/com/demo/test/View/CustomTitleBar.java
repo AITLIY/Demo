@@ -39,8 +39,14 @@ public class CustomTitleBar extends RelativeLayout {
         TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomTitleBar);
         if (attributes != null) {
             //处理titleBar背景色
-//            int titleBarBackGround = attributes.getResourceId(R.styleable.CustomTitleBar_title_background_color, Color.GREEN);
-//            setBackgroundResource(titleBarBackGround);
+//            int titleBarBackGround = attributes.getResourceId(R.styleable.CustomTitleBar_title_background_color, Color.GREEN); //Color.GREEN做默认值 未设置时会报错
+            int titleBarBackGround = attributes.getResourceId(R.styleable.CustomTitleBar_title_background_color, R.drawable.titlebar_add_icon);
+            setBackgroundResource(titleBarBackGround);
+
+            // 默认为Color的方法
+//            int titleBarBackGround = attributes.getColor(R.styleable.CustomTitleBar_title_background_color, Color.GREEN);
+//            setBackgroundColor(titleBarBackGround);
+
             //先处理左边按钮
             //获取是否要显示左边按钮
             boolean leftButtonVisible = attributes.getBoolean(R.styleable.CustomTitleBar_left_button_visible, true);
@@ -57,8 +63,8 @@ public class CustomTitleBar extends RelativeLayout {
                 int leftButtonTextColor = attributes.getColor(R.styleable.CustomTitleBar_left_button_text_color, Color.WHITE);
                 titleBarLeftBtn.setTextColor(leftButtonTextColor);
             }
-            //设置左边图片icon 这里是二选一 要么只能是文字 要么只能是图片
-            int leftButtonDrawable = attributes.getResourceId(R.styleable.CustomTitleBar_left_button_drawable, R.drawable.titlebar_add_icon);
+            //设置左边图片icon
+            int leftButtonDrawable = attributes.getResourceId(R.styleable.CustomTitleBar_left_button_drawable, -1);
             if (leftButtonDrawable != -1) {
                 titleBarLeftBtn.setCompoundDrawablesWithIntrinsicBounds(leftButtonDrawable, 0, 0, 0);  //设置到哪个控件的位置（）
             }
@@ -68,7 +74,7 @@ public class CustomTitleBar extends RelativeLayout {
             int titleTextDrawable = attributes.getResourceId(R.styleable.CustomTitleBar_title_text_drawable, -1);
             if (titleTextDrawable != -1) {
                 titleBarTitle.setBackgroundResource(titleTextDrawable);
-            } else {
+            } else { //这里是二选一 要么只能是文字 要么只能是图片
                 //如果不是图片标题 则获取文字标题
                 String titleText = attributes.getString(R.styleable.CustomTitleBar_title_text);
                 if (!TextUtils.isEmpty(titleText)) {
@@ -95,7 +101,7 @@ public class CustomTitleBar extends RelativeLayout {
                 int rightButtonTextColor = attributes.getColor(R.styleable.CustomTitleBar_right_button_text_color, Color.WHITE);
                 titleBarRightBtn.setTextColor(rightButtonTextColor);
             }
-            //设置右边图片icon 这里是二选一 要么只能是文字 要么只能是图片
+            //设置右边图片icon
             int rightButtonDrawable = attributes.getResourceId(R.styleable.CustomTitleBar_right_button_drawable, -1);
             if (rightButtonDrawable != -1) {
                 titleBarRightBtn.setCompoundDrawablesWithIntrinsicBounds(0, 0, rightButtonDrawable, 0);  //设置到哪个控件的位置（）

@@ -51,10 +51,32 @@ public class AFragment extends Fragment {
         return mView;
     }
 
+    String nums[] = {"1","2","3","4","5","6","7","8","9"};
+    String hzs[] = {"一","二","三","四","五","六","七","八","九"};
+
     private void init() {
 
         initView();
         initDate();
+
+        test();
+
+    }
+
+    private void test() {
+
+        String text = "11";
+
+        for (int i = 0; i < nums.length; i++) {
+            // 转换文字
+            if (text.contains(nums[i])) {
+                LogUtils.i("replace :" + nums[i]);
+                text = text.replace(nums[i],hzs[i]);
+
+            }
+        }
+
+        LogUtils.i("replace :" + text);
     }
 
     private void initView() {
