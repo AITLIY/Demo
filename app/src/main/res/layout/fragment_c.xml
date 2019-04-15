@@ -71,4 +71,8 @@
             lee:title_text="标题6"/>
 
     </LinearLayout>
+
+    <!--<com.demo.test.View.PercentView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
 </FrameLayout>

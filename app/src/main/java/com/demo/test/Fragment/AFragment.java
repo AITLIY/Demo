@@ -1,7 +1,7 @@
 package com.demo.test.Fragment;
 
 import android.Manifest;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -16,9 +16,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.demo.test.Activity.R;
-import com.demo.test.util.BadgeUtil;
+import com.demo.test.Activity.CustomViewActivity;
+import com.demo.test.GlobalApplication;
+import com.demo.test.R;
 import com.demo.test.util.SHA1;
 import com.lidroid.xutils.util.LogUtils;
 
@@ -85,7 +85,9 @@ public class AFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d("OnClick", "start run");
-                BadgeUtil.setBadgeCount(getContext(), 10, R.mipmap.ic_launcher);
+//                BadgeUtil.setBadgeCount(getContext(), 10, R.mipmap.ic_launcher);
+//                getActivity().startActivity(new Intent(getContext(),LeakCanaryActivity.class));
+                getActivity().startActivity(new Intent(getContext(),CustomViewActivity.class));
             }
         });
 
@@ -93,7 +95,7 @@ public class AFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d("OnClick", "stop run");
-                BadgeUtil.resetBadgeCount(getContext(), R.mipmap.ic_launcher);
+//                BadgeUtil.resetBadgeCount(getContext(), R.mipmap.ic_launcher);
             }
         });
 
@@ -101,7 +103,7 @@ public class AFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d("OnClick", "get");
-                getDataFromService();
+//                getDataFromService();
             }
         });
 
@@ -110,29 +112,7 @@ public class AFragment extends Fragment {
     private void initDate() {
 
         ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
-        mRequestQueue = getRequestQueue();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-
-    }
-
-    public RequestQueue getRequestQueue() {
-
-        if (mRequestQueue == null) {
-            mRequestQueue = Volley.newRequestQueue(getContext());
-            mRequestQueue.getCache().clear();
-        }
-
-        return mRequestQueue;
+        mRequestQueue = GlobalApplication.getRequestQueue();
     }
 
     private void getDataFromService() {

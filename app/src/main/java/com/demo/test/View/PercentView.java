@@ -78,14 +78,18 @@ public class PercentView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         mPaint.setColor(Color.GRAY);
         // FILL填充, STROKE描边,FILL_AND_STROKE填充和描边
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
         int with = getWidth();
         int height = getHeight();
         Log.e(TAG, "onDraw---->" + with + "*" + height);
+
         float radius = with / 4;
         canvas.drawCircle(with / 2, with / 2, radius, mPaint);
+
         mPaint.setColor(Color.BLUE);
         oval.set(with / 2 - radius, with / 2 - radius, with / 2
                 + radius, with / 2 + radius);//用于定义的圆弧的形状和大小的界限

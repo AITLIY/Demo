@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.demo.test.Activity.R;
+import com.demo.test.R;
+
 
 /**
  * Created by Administrator on 2019/4/1.
