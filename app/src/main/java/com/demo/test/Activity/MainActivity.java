@@ -9,6 +9,7 @@ import android.widget.TabHost;
 import com.demo.test.Fragment.AFragment;
 import com.demo.test.Fragment.BFragment;
 import com.demo.test.Fragment.CFragment;
+import com.demo.test.R;
 
 public class MainActivity extends AppCompatActivity {
 

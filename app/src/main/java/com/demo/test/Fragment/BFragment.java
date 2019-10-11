@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.demo.test.Activity.R;
+import com.demo.test.R;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -136,7 +136,7 @@ public class BFragment extends Fragment {
             list.add("第" + i + "条");
         }
         if (mList != null) {
-            if (!listview.isFooterShown()) {
+            if (!listview.isFocusable()) {
                 mList.clear();
                 mList.addAll(list);
 
